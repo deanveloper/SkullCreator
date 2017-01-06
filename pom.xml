@@ -6,7 +6,7 @@
 
     <groupId>com.deanveloper</groupId>
     <artifactId>skullcreator</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version>
 
     <build>
         <testResources>
