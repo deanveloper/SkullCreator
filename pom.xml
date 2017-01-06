@@ -9,12 +9,12 @@
     <version>1.0</version>
 
     <build>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
+        <testResources>
+            <testResource>
+                <directory>src/test/resources</directory>
                 <filtering>true</filtering>
-            </resource>
-        </resources>
+            </testResource>
+        </testResources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
