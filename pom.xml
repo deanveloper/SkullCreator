@@ -45,4 +45,12 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>bintray-deanveloper-SkullCreator</id>
+            <name>deanveloper-SkullCreator</name>
+            <url>https://api.bintray.com/maven/deanveloper/SkullCreator/SkullCreator/;publish=1</url>
+        </repository>
+    </distributionManagement>
 </project>
