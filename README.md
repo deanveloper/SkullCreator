@@ -44,10 +44,91 @@ public static ItemStack getCheeseSkull() {
 Note that with any of these methods, if you substitute the `from` with `with`, you can supply an `ItemStack` and the
 plugin will add the skull data onto the item you provide. (ie `SkullCreator.withName(item, "Deanveloper");`)
 
-
 ## Installation
 To use this library, you can either copy the class from [GitHub][skullcreator-git] and put it in your project,
-or you can get it through Maven. I am currently setting up a bintray and will most likely get this library into jcenter.
+or you can get it through Maven.
+
+## Installation with Maven
+The project will most likely be added to JCenter at a later point, but for now this
+is how to import the project.
+
+First, add the repo into your `pom.xml`...
+
+```xml
+<repositories>
+    ...
+    <repository>
+        <id>skullcreator-repo</id>
+        <url>https://dl.bintray.com/deanveloper/SkullCreator</url>
+    </repository>
+    ...
+</repositories>
+```
+
+Then, add the dependency!
+
+```xml
+<dependencies>
+    ...
+    <!-- SkullCreator -->
+    <dependency>
+        <groupId>com.deanveloper</groupId>
+        <artifactId>skullcreator</artifactId>
+        <version>1.0.1</version>
+        <scope>compile</scope>
+    </dependency>
+    ...
+</dependencies>
+```
+
+Now that you have added the dependency, use `maven-shade-plugin` or `maven-assembler-plugin` to put the plugin in your
+jar file. **Be absolutely sure that all dependencies that you don't want inside your jar file (ie Bukkit/Spigot, or other
+plugins) have `<scope>provided</scope>`!**
+
+### With `maven-shade-plugin`
+Add the following to your `pom.xml`:
+```xml
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>2.4.3</version>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                          <goal>shade</goal>
+                    </goals>
+                </execution>
+            </executions>
+      </plugin>
+    </plugins>
+</build>
+```
+
+### With `maven-assembly-plugin`
+Add the following to your `pom.xml`:
+```xml
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <version>3.0.0</version>
+            <configuration>
+                <descriptorRefs>
+                    <descriptorRef>jar-with-dependencies</descriptorRef>
+                </descriptorRefs>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+```
+
+## Installation with Gradle
+I'm not quite sure how gradle works, but if anyone wants to make a pull request to add an installation guide with
+gradle, feel free!
 
 [freshcoal]: http://heads.freshcoal.com
 [minecraft-heads]: http://minecraft-heads.com/
