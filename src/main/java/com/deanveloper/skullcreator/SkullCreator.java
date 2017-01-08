@@ -90,7 +90,7 @@ public class SkullCreator {
         );
     }
 
-    enum Type {
+    public enum Type {
         BLOCK(Material.SKULL),
         ITEM(Material.SKULL_ITEM);
 
