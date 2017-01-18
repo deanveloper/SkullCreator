@@ -12,7 +12,7 @@ to create the heads through commands. As far as I'm aware, there's no easy way t
 Anyway, the code to create a player skull from a name is `SkullCreator.fromName(Type.ITEM, "Deanveloper")`.
 
 ### By Base64
-Base64 hashes are how most mapmakers get their heads. They usually go on websites such as [freshcoal]
+Base64 hashes are how most mapmakers get their heads. They usually go on websites such as [freshcoal], [mineskin],
 or [minecraft-heads]. These sites give them very long commands and they can paste them into command blocks which
 give them the items.
 
@@ -140,5 +140,6 @@ I'm not quite sure how gradle works, but if anyone wants to make a pull request 
 gradle, feel free!
 
 [freshcoal]: http://heads.freshcoal.com
+[mineskin]: https://mineskin.org
 [minecraft-heads]: http://minecraft-heads.com/
 [skullcreator-git]: https://github.com/Deanveloper/SkullCreator/blob/master/src/main/java/com/deanveloper/skullcreator/SkullCreator.java
