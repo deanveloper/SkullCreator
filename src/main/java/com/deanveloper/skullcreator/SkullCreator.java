@@ -44,11 +44,26 @@ public class SkullCreator {
         );
     }
 
+    /**
+     * Creates a player skull based on a Mojang server URL.
+     *
+     * @param type  Whether to make a block or item
+     * @param url   The URL of the Mojang skin
+     * @return The head associated with the URL
+     */
     public static ItemStack fromUrl(Type type, String url) {
         ItemStack item = new ItemStack(type.mat, 1, (short) 3);
         return withUrl(item, url);
     }
 
+
+    /**
+     * Creates a player skull based on a Mojang server URL.
+     *
+     * @param item  The item to apply the skin to
+     * @param url   The URL of the Mojang skin
+     * @return The head associated with the URL
+     */
     public static ItemStack withUrl(ItemStack item, String url) {
         notNull(url, "url");
         URI actualUrl;
