@@ -150,4 +150,4 @@ I'd really appreciate any donations, even anything as small as a pack of ramen!
 [mineskin]: https://mineskin.org
 [minecraft-heads]: http://minecraft-heads.com/
 [skullcreator-git]: https://github.com/Deanveloper/SkullCreator/blob/master/src/main/java/com/deanveloper/skullcreator/SkullCreator.java
-[paypal]: PayPal.Me/Dean98/5USD
+[paypal]: https://PayPal.Me/Dean98/5USD
