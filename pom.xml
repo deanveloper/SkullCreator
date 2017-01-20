@@ -16,10 +16,10 @@
             </testResource>
         </testResources>
         <plugins>
+            <!-- Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
@@ -41,8 +41,22 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!-- Javadoc Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.4</version>
+                <configuration>
+                    <reportOutputDirectory>${project.basedir}/docs</reportOutputDirectory>
+                    <destDir>/</destDir>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
+    <reporting>
+    </reporting>
 
     <repositories>
         <repository>
