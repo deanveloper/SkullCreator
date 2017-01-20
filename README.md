@@ -141,7 +141,13 @@ Add the following to your `pom.xml`:
 I'm not quite sure how gradle works, but if anyone wants to make a pull request to add an installation guide with
 gradle, feel free!
 
+## Donate
+I'd really appreciate any donations, even anything as small as a pack of ramen!
+
+[<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" height="50">][paypal]
+
 [freshcoal]: http://heads.freshcoal.com
 [mineskin]: https://mineskin.org
 [minecraft-heads]: http://minecraft-heads.com/
 [skullcreator-git]: https://github.com/Deanveloper/SkullCreator/blob/master/src/main/java/com/deanveloper/skullcreator/SkullCreator.java
+[paypal]: PayPal.Me/Dean98/5USD
