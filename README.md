@@ -1,6 +1,8 @@
 # SkullCreator
 SkullCreator is a library designed to make the creation of player skulls as easy as possible.
 
+Javadocs are available at https://skullcreator.deanveloper.com, otherwise you can keep looking here!
+
 ## Usage
 Using the SkullCreator library is quite easy! There are three ways to create a player skull.
 By name, base64, and url.
