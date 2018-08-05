@@ -11,15 +11,23 @@ Using the SkullCreator library is quite easy! There are three ways to create a p
 By name, base64, and url.
 
 ### By Name
-The way that skulls are handled internally use names rather than UUIDs, most likely to make things easier for users
-to create the heads through commands. As far as I'm aware, there's no easy way to create a player skull from a UUID.
+The code to create a player skull from a player's name is fairly straightforward:
+`SkullCreator.itemFromName("Deanveloper")`. This is not recommended as players can change their
+name, and change their skin. If either of these happen, the skull produced may not be the expected
+skull.
 
-Anyway, the code to create a player skull from a name is `SkullCreator.fromName(Type.ITEM, "Deanveloper")`.
+### By UUID
+The code to create a player skull from a player's UUID is fairly 
+straightforward: `SkullCreator.itemFromUuid(UUID.fromString("4a96ebf7-e27c-41ee-9853-a52ba903fb06"))`.
+This should only be used for heads which you want to change when the target player changes their skin. If you
+want the skull to stay the same, even after the player changes their skin, check the following methods!
+
 
 ### By Base64
 Base64 hashes are how most mapmakers get their heads. They usually go on websites such as [freshcoal], [mineskin],
 or [minecraft-heads]. These sites give them very long commands and they can paste them into command blocks which
-give them the items.
+give them the items. These skulls will ALWAYS have the same skin applied to them, even if the original player has
+changed their skin.
 
 What you can do with this plugin is take the base64 from after the `Value:` part of the command, and then
 paste that into a method to get the skull. For instance, to get a Stormtrooper skull, you can do this:
@@ -30,7 +38,7 @@ public static ItemStack getStormtrooper() {
     String base64 = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L" +
      "3RleHR1cmUvNTIyODRlMTMyYmZkNjU5YmM2YWRhNDk3YzRmYTMwOTRjZDkzMjMxYTZiNTA1YTEyY2U3Y2Q1MTM1YmE4ZmY5MyJ9fX0=";
     
-    return SkullCreator.fromBase64(Type.ITEM, base64);
+    return SkullCreator.itemFromBase64(base64);
 }
 ```
 
@@ -42,12 +50,12 @@ base64 string (after all, they are very long!) you can instead store the link to
 public static ItemStack getCheeseSkull() {
     String s = "http://textures.minecraft.net/texture/955d611a878e821231749b2965708cad942650672db09e26847a88e2fac2946";
     
-    return SkullCreator.fromUrl(Type.ITEM, s);
+    return SkullCreator.itemFromUrl(s);
 }
 ```
 
 Note that with any of these methods, if you substitute the `from` with `with`, you can supply an `ItemStack` and the
-plugin will add the skull data onto the item you provide. (ie `SkullCreator.withName(item, "Deanveloper");`)
+plugin will add the skull data onto the item you provide. (ie `SkullCreator.itemWithName(item, "Deanveloper");`)
 
 ## Installation
 To use this library, you can either copy the class from [GitHub][skullcreator-git] and put it in your project,
