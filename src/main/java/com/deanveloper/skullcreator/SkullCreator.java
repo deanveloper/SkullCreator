@@ -57,7 +57,7 @@ public class SkullCreator {
 	}
 
 	/**
-	 * Creates a player skull with a UUID.
+	 * Creates a player skull with a UUID. 1.13 only.
 	 *
 	 * @param id The Player's UUID
 	 * @return The head of the Player
@@ -69,7 +69,7 @@ public class SkullCreator {
 	}
 
 	/**
-	 * Creates a player skull based on a player's name.
+	 * Creates a player skull based on a UUID. 1.13 only.
 	 *
 	 * @param item The item to apply the name to
 	 * @param id The Player's UUID
