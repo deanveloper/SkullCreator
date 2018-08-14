@@ -16,7 +16,7 @@ The code to create a player skull from a player's name is fairly straightforward
 name, and change their skin. If either of these happen, the skull produced may not be the expected
 skull.
 
-### By UUID
+### By UUID (1.13 only)
 The code to create a player skull from a player's UUID is fairly 
 straightforward: `SkullCreator.itemFromUuid(UUID.fromString("4a96ebf7-e27c-41ee-9853-a52ba903fb06"))`.
 This should only be used for heads which you want to change when the target player changes their skin. If you
