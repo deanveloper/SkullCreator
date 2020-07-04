@@ -21,7 +21,7 @@ skull.
 
 ### By UUID
 The code to create a player skull from a player's UUID is fairly 
-straightforward: `SkullCreator.itemWithUuid(itemToMutate, UUID.fromString("4a96ebf7-e27c-41ee-9853-a52ba903fb06"))`.
+straightforward: `SkullCreator.itemFromUuid(itemToMutate, UUID.fromString("4a96ebf7-e27c-41ee-9853-a52ba903fb06"))`.
 This should only be used for heads which you want to change when the target player changes their skin. If you
 want the skull to stay the same, even after the player changes their skin, check the following methods!
 
@@ -40,8 +40,7 @@ public static ItemStack getStormtrooper() {
     String base64 = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L" +
      "3RleHR1cmUvNTIyODRlMTMyYmZkNjU5YmM2YWRhNDk3YzRmYTMwOTRjZDkzMjMxYTZiNTA1YTEyY2U3Y2Q1MTM1YmE4ZmY5MyJ9fX0=";
 
-    ItemStack stormtrooper = new ItemStack(Material.SKULL, 1, (byte) 3);
-    return SkullCreator.itemWithBase64(base64);
+    return SkullCreator.itemFromBase64(base64);
 }
 ```
 
@@ -54,7 +53,7 @@ public static ItemStack getCheeseSkull() {
     String s = "http://textures.minecraft.net/texture/955d611a878e821231749b2965708cad942650672db09e26847a88e2fac2946";
     
     ItemStack stormtrooper = new ItemStack(Material.SKULL, 1, (byte) 3);
-    return SkullCreator.itemWithUrl(s);
+    return SkullCreator.itemFromUrl(s);
 }
 ```
 
