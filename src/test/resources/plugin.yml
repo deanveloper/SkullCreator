@@ -1,7 +1,0 @@
-main: com.deanveloper.skullcreator.SkullCreatorTesterPlugin
-author: Dean B
-version: ${project.version}
-name: SkullCreatorTest
-commands:
-  testskull:
-    description: "lol what"
