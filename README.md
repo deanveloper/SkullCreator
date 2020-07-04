@@ -19,13 +19,13 @@ The code to create a player skull from a player's name is fairly straightforward
 name, and change their skin. If either of these happen, the skull produced may not be the expected
 skull.
 
-### By UUID (1.13+ only)
+### By UUID
 The code to create a player skull from a player's UUID is fairly 
 straightforward: `SkullCreator.itemWithUuid(itemToMutate, UUID.fromString("4a96ebf7-e27c-41ee-9853-a52ba903fb06"))`.
 This should only be used for heads which you want to change when the target player changes their skin. If you
 want the skull to stay the same, even after the player changes their skin, check the following methods!
 
-### By Base64 (1.13+ only)
+### By Base64
 Base64 hashes are how most mapmakers get their heads. They usually go on websites such as [freshcoal], [mineskin],
 or [minecraft-heads]. These sites give them very long commands and they can paste them into command blocks which
 give them the items. These skulls will ALWAYS have the same skin applied to them, even if the original player has
