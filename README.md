@@ -87,7 +87,7 @@ Then, add the dependency!
     <dependency>
         <groupId>com.deanveloper</groupId>
         <artifactId>skullcreator</artifactId>
-        <version>1.0.2</version>
+        <version>3.0.0</version>
         <scope>compile</scope>
     </dependency>
     ...
