@@ -78,7 +78,7 @@ First, add the repo into your `pom.xml`...
 </repositories>
 ```
 
-Then, add the dependency!
+Then, add the dependency! (note - the groupId was changed to `dev.dbassett` in version `3.0.0`, make sure to reflect this change when upgrading!)
 
 ```xml
 <dependencies>
