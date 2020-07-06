@@ -85,7 +85,7 @@ Then, add the dependency!
     ...
     <!-- SkullCreator -->
     <dependency>
-        <groupId>com.deanveloper</groupId>
+        <groupId>dev.dbassett</groupId>
         <artifactId>skullcreator</artifactId>
         <version>3.0.0</version>
         <scope>compile</scope>
