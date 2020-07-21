@@ -95,8 +95,7 @@ Then, add the dependency! (note - the groupId was changed to `dev.dbassett` in v
 ```
 
 Now that you have added the dependency, use `maven-shade-plugin` or `maven-assembler-plugin` to put the plugin in your
-jar file. **Be absolutely sure that all dependencies that you don't want inside your jar file (ie Bukkit/Spigot, or other
-plugins) have `<scope>provided</scope>`!**
+jar file.
 
 ### With `maven-shade-plugin`
 Add the following to your `pom.xml`:
