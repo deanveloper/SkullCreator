@@ -21,7 +21,7 @@ skull.
 
 ### By UUID
 The code to create a player skull from a player's UUID is fairly 
-straightforward: `SkullCreator.itemFromUuid(itemToMutate, UUID.fromString("4a96ebf7-e27c-41ee-9853-a52ba903fb06"))`.
+straightforward: `SkullCreator.itemFromUuid(UUID.fromString("4a96ebf7-e27c-41ee-9853-a52ba903fb06"))`.
 This should only be used for heads which you want to change when the target player changes their skin. If you
 want the skull to stay the same, even after the player changes their skin, check the following methods!
 
