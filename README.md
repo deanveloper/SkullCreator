@@ -147,6 +147,19 @@ Add the following to your `pom.xml`:
 </build>
 ```
 
+And it's dependency:
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>3.3.0</version>
+        <type>maven-plugin</type>
+    </dependency>
+</dependencies>
+```
+
 ## Installation with Gradle
 I'm not quite sure how gradle works, but if anyone wants to make a pull request to add an installation guide with
 gradle, feel free!
