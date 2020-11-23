@@ -3,36 +3,23 @@ SkullCreator is a library designed to make the creation of player skulls as easy
 
 Javadocs are available at https://skullcreator.dbassett.dev, otherwise you can keep looking here!
 
-I spent quite a bit of time researching how player skulls behaved, and figuring out
-a single solution that works for all versions of Minecraft,
-so leaving a :star: would mean a lot!
+I spent quite a bit of time researching how player skulls behaved, and figuring out a single solution that works for many versions of Minecraft, so leaving a :star: would mean a lot!
 
 **Supported versions: 1.12.2 and newer.**
 
 ## Usage
-Using the SkullCreator library is quite easy! There are three ways to create a player skull.
-By name, uuid, and base64/url.
+Using the SkullCreator library is quite easy! There are three ways to create a player skull. By name, uuid, and base64/url.
 
 ### By Name
-The code to create a player skull from a player's name is fairly straightforward:
-`SkullCreator.itemFromName("deanveloper")`. This is not recommended as players can change their
-name, and change their skin. If either of these happen, the skull produced may not be the expected
-skull.
+The code to create a player skull from a player's name is fairly straightforward: `SkullCreator.itemFromName("deanveloper")`. This is not recommended as players can change their name, and change their skin. If either of these happen, the skull produced may not be the expected skull.
 
 ### By UUID
-The code to create a player skull from a player's UUID is fairly 
-straightforward: `SkullCreator.itemFromUuid(UUID.fromString("4a96ebf7-e27c-41ee-9853-a52ba903fb06"))`.
-This should only be used for heads which you want to change when the target player changes their skin. If you
-want the skull to stay the same, even after the player changes their skin, check the following methods!
+The code to create a player skull from a player's UUID is fairly straightforward: `SkullCreator.itemFromUuid(UUID.fromString("4a96ebf7-e27c-41ee-9853-a52ba903fb06"))`. This should only be used for heads which you want to change when the target player changes their skin. If you want the skull to stay the same, even after the player changes their skin, check the following methods!
 
 ### By Base64
-Base64 hashes are how most mapmakers get their heads. They usually go on websites such as [freshcoal], [mineskin],
-or [minecraft-heads]. These sites give them very long commands and they can paste them into command blocks which
-give them the items. These skulls will ALWAYS have the same skin applied to them, even if the original player has
-changed their skin.
+Base64 hashes are how most mapmakers get their heads. They usually go on websites such as [freshcoal], [mineskin], or [minecraft-heads]. These sites give them very long commands and they can paste them into command blocks which give them the items. These skulls will ALWAYS have the same skin applied to them, even if the original player has changed their skin.
 
-What you can do with this plugin is take the base64 from after the `Value:` part of the command, and then
-paste that into a method to get the skull. For instance, to get a Stormtrooper skull, you can do this:
+What you can do with this plugin is take the base64 from after the `Value:` part of the command, and then paste that into a method to get the skull. For instance, to get a Stormtrooper skull, you can do this:
 
 ```Java
 public static ItemStack getStormtrooper() {
@@ -45,8 +32,7 @@ public static ItemStack getStormtrooper() {
 ```
 
 ### By Mojang URL
-The base64 strings contain an encoded mojang URL inside of them. If you would not like to store the whole
-base64 string (after all, they are very long and gross looking!) you can instead store the link to the url.
+The base64 strings contain an encoded mojang URL inside of them. If you would not like to store the whole base64 string (after all, they are very long and gross looking!) you can instead store the link to the url.
 
 ```Java
 public static ItemStack getCheeseSkull() {
@@ -58,23 +44,19 @@ public static ItemStack getCheeseSkull() {
 ```
 
 ## Installation
-To use this library, you can either copy the class from [GitHub][skullcreator-git] and put it in your project,
-or you can get it through Maven.
+To use this library, you can either copy the class from [GitHub][skullcreator-git] and put it in your project, or you can get it through Maven.
 
 ## Installation with Maven
-The project will most likely be added to JCenter at a later point, but for now this
-is how to import the project.
+The project will most likely be added to JCenter at a later point, but for now this is how to import the project.
 
 First, add the repo into your `pom.xml`...
 
 ```xml
 <repositories>
-    ...
     <repository>
         <id>skullcreator-repo</id>
         <url>https://dl.bintray.com/deanveloper/SkullCreator</url>
     </repository>
-    ...
 </repositories>
 ```
 
@@ -82,7 +64,6 @@ Then, add the dependency! (note - the groupId was changed to `dev.dbassett` in v
 
 ```xml
 <dependencies>
-    ...
     <!-- SkullCreator -->
     <dependency>
         <groupId>dev.dbassett</groupId>
@@ -90,12 +71,10 @@ Then, add the dependency! (note - the groupId was changed to `dev.dbassett` in v
         <version>3.0.0</version>
         <scope>compile</scope>
     </dependency>
-    ...
 </dependencies>
 ```
 
-Now that you have added the dependency, use `maven-shade-plugin` or `maven-assembler-plugin` to put the plugin in your
-jar file.
+Now that you have added the dependency, use `maven-shade-plugin` or `maven-assembler-plugin` to put the plugin in your jar file.
 
 ### With `maven-shade-plugin`
 Add the following to your `pom.xml`:
@@ -148,9 +127,8 @@ Add the following to your `pom.xml`:
 ```
 
 ## Installation with Gradle
-If you want to use Gradle, here is how to.
 
-First of all add repository of SkullCreator (build.gradle):
+First, add the repo to your `pom.xml`...
 ```
 repositories {
     mavenCentral()
@@ -161,21 +139,14 @@ repositories {
 }
 ```
 
-Then just add in dependencies to compile from repository SkullCreator:
+Then the dependency:
 ```
 dependencies {
-    compileOnly 'dev.dbassett:skullcreator:3.3.0'
+    compileOnly 'dev.dbassett:skullcreator:3.0.0'
 }
 ```
-Just save and rebuild Gradle, and enjoy! :)
-
-## Donate
-I'd really appreciate any donations, even anything as small as a pack of ramen!
-
-[<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" height="50">][paypal]
 
 [freshcoal]: http://heads.freshcoal.com
 [mineskin]: https://mineskin.org
 [minecraft-heads]: http://minecraft-heads.com/
 [skullcreator-git]: https://github.com/Deanveloper/SkullCreator/blob/master/src/main/java/com/deanveloper/skullcreator/SkullCreator.java
-[paypal]: https://PayPal.Me/Dean98/5USD
