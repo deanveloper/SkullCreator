@@ -148,8 +148,26 @@ Add the following to your `pom.xml`:
 ```
 
 ## Installation with Gradle
-I'm not quite sure how gradle works, but if anyone wants to make a pull request to add an installation guide with
-gradle, feel free!
+If you want to use Gradle, here is how to.
+
+First of all add repository of SkullCreator (build.gradle):
+```
+repositories {
+    mavenCentral()
+    maven {
+        name = 'skullcreator-repo'
+        url = 'https://dl.bintray.com/deanveloper/SkullCreator'
+    }
+}
+```
+
+Then just add in dependencies to compile from repository SkullCreator:
+```
+dependencies {
+    compileOnly 'dev.dbassett:skullcreator:3.3.0'
+}
+```
+Just save and rebuild Gradle, and enjoy! :)
 
 ## Donate
 I'd really appreciate any donations, even anything as small as a pack of ramen!
