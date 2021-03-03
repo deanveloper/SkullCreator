@@ -164,7 +164,7 @@ repositories {
 Then just add in dependencies to compile from repository SkullCreator:
 ```
 dependencies {
-    compileOnly 'dev.dbassett:skullcreator:3.3.0'
+    compileOnly 'dev.dbassett:skullcreator:3.0.0'
 }
 ```
 Just save and rebuild Gradle, and enjoy! :)
