@@ -55,7 +55,7 @@ First, add the repo into your `pom.xml`...
 <repositories>
     <repository>
         <id>skullcreator-repo</id>
-        <url>https://dl.bintray.com/deanveloper/SkullCreator</url>
+        <url>https://github.com/deanveloper/SkullCreator/raw/mvn-repo/</url>
     </repository>
 </repositories>
 ```
@@ -74,58 +74,6 @@ Then, add the dependency! (note - the groupId was changed to `dev.dbassett` in v
 </dependencies>
 ```
 
-Now that you have added the dependency, use `maven-shade-plugin` or `maven-assembler-plugin` to put the plugin in your jar file.
-
-### With `maven-shade-plugin`
-Add the following to your `pom.xml`:
-```xml
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-shade-plugin</artifactId>
-            <version>2.4.3</version>
-            <executions>
-                <execution>
-                    <phase>package</phase>
-                    <goals>
-                          <goal>shade</goal>
-                    </goals>
-                </execution>
-            </executions>
-      </plugin>
-    </plugins>
-</build>
-```
-
-### With `maven-assembly-plugin`
-Add the following to your `pom.xml`:
-```xml
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-assembly-plugin</artifactId>
-            <version>3.0.0</version>
-            <configuration>
-                <descriptorRefs>
-                    <descriptorRef>jar-with-dependencies</descriptorRef>
-                </descriptorRefs>
-            </configuration>
-            <executions>
-                <execution>
-                    <id>make-assembly</id> <!-- this is used for inheritance merges -->
-                    <phase>package</phase> <!-- bind to the packaging phase -->
-                    <goals>
-                        <goal>single</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
-    </plugins>
-</build>
-```
-
 ## Installation with Gradle
 
 First, add the repo to your `pom.xml`...
@@ -134,7 +82,7 @@ repositories {
     mavenCentral()
     maven {
         name = 'skullcreator-repo'
-        url = 'https://dl.bintray.com/deanveloper/SkullCreator'
+        url = 'https://github.com/deanveloper/SkullCreator/raw/mvn-repo/'
     }
 }
 ```
