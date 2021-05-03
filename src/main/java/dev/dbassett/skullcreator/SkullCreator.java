@@ -263,7 +263,7 @@ public class SkullCreator {
 				b64.substring(b64.length() - 20).hashCode(),
 				b64.substring(b64.length() - 10).hashCode()
 		);
-		GameProfile profile = new GameProfile(id, "aaaaa");
+		GameProfile profile = new GameProfile(id, "Player");
 		profile.getProperties().put("textures", new Property("textures", b64));
 		return profile;
 	}

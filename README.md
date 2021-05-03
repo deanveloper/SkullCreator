@@ -68,7 +68,7 @@ Then, add the dependency! (note - the groupId was changed to `dev.dbassett` in v
     <dependency>
         <groupId>dev.dbassett</groupId>
         <artifactId>skullcreator</artifactId>
-        <version>3.0.0</version>
+        <version>3.0.1</version>
         <scope>compile</scope>
     </dependency>
 </dependencies>
@@ -90,7 +90,7 @@ repositories {
 Then the dependency:
 ```
 dependencies {
-    compileOnly 'dev.dbassett:skullcreator:3.0.0'
+    compileOnly 'dev.dbassett:skullcreator:3.0.1'
 }
 ```
 
