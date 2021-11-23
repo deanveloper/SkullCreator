@@ -307,16 +307,16 @@ public class SkullCreator {
 	// but we expect this and catch the error at runtime.
 	@SuppressWarnings("JavaReflectionMemberAccess")
 	private static void checkLegacy() {
+		if (warningPosted) return;
 		try {
 			// if both of these succeed, then we are running
 			// in a legacy api, but on a modern (1.13+) server.
 			Material.class.getDeclaredField("PLAYER_HEAD");
 			Material.valueOf("SKULL");
 
-			if (!warningPosted) {
-				Bukkit.getLogger().warning("SKULLCREATOR API - Using the legacy bukkit API with 1.13+ bukkit versions is not supported!");
-				warningPosted = true;
-			}
+			Bukkit.getLogger().warning("SKULLCREATOR API - Using the legacy bukkit API with 1.13+ bukkit versions is not supported!");
+			warningPosted = true;
+			
 		} catch (NoSuchFieldException | IllegalArgumentException ignored) {}
 	}
 }
