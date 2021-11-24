@@ -84,7 +84,7 @@ public class SkullCreator {
 	/**
 	 * Creates a player skull item with the skin based on a base64 string.
 	 *
-	 * @param base64 The Mojang URL.
+	 * @param base64 The Base64 string.
 	 * @return The head of the Player.
 	 */
 	public static ItemStack itemFromBase64(String base64) {
