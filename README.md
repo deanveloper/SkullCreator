@@ -38,7 +38,6 @@ The base64 strings contain an encoded mojang URL inside of them. If you would no
 public static ItemStack getCheeseSkull() {
     String s = "http://textures.minecraft.net/texture/955d611a878e821231749b2965708cad942650672db09e26847a88e2fac2946";
     
-    ItemStack stormtrooper = new ItemStack(Material.SKULL, 1, (byte) 3);
     return SkullCreator.itemFromUrl(s);
 }
 ```
