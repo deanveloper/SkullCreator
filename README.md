@@ -1,7 +1,7 @@
 # SkullCreator
 SkullCreator is a library designed to make the creation of player skulls as easy as possible.
 
-Javadocs are available at https://skullcreator.dbassett.dev, otherwise you can keep looking here!
+Javadocs are available at https://skullcreator.dean.day, otherwise you can keep looking here!
 
 I spent quite a bit of time researching how player skulls behaved, and figuring out a single solution that works for many versions of Minecraft, so leaving a :star: would mean a lot!
 
@@ -44,55 +44,7 @@ public static ItemStack getCheeseSkull() {
 ```
 
 ## Installation
-To use this library, you can either copy the class from [GitHub][skullcreator-git] and put it in your project, or you can get it through Maven.
-
-## Installation with Maven
-The project will most likely be added to JCenter at a later point, but for now this is how to import the project.
-
-First, add the repo into your `pom.xml`...
-
-```xml
-<repositories>
-    <repository>
-        <id>skullcreator-repo</id>
-        <url>https://github.com/deanveloper/SkullCreator/raw/mvn-repo/</url>
-    </repository>
-</repositories>
-```
-
-Then, add the dependency! (note - the groupId was changed to `dev.dbassett` in version `3.0.0`, make sure to reflect this change when upgrading!)
-
-```xml
-<dependencies>
-    <!-- SkullCreator -->
-    <dependency>
-        <groupId>dev.dbassett</groupId>
-        <artifactId>skullcreator</artifactId>
-        <version>3.0.1</version>
-        <scope>compile</scope>
-    </dependency>
-</dependencies>
-```
-
-## Installation with Gradle
-
-First, add the repo to your `pom.xml`...
-```
-repositories {
-    mavenCentral()
-    maven {
-        name = 'skullcreator-repo'
-        url = 'https://github.com/deanveloper/SkullCreator/raw/mvn-repo/'
-    }
-}
-```
-
-Then the dependency:
-```
-dependencies {
-    compileOnly 'dev.dbassett:skullcreator:3.0.1'
-}
-```
+To use this library, copy the class from [GitHub][skullcreator-git] and put it in your project.
 
 [freshcoal]: http://heads.freshcoal.com
 [mineskin]: https://mineskin.org

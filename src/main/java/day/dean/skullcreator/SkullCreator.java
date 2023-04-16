@@ -1,4 +1,6 @@
-package dev.dbassett.skullcreator;
+package day.dean.skullcreator;
+
+// Copyright (c) 2017 deanveloper (see LICENSE.md for more info)
 
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
@@ -24,7 +26,7 @@ import java.util.UUID;
  * <p>
  * Does not use any NMS code, and should work across all versions.
  *
- * @author Dean B on 12/28/2016.
+ * @author deanveloper on 12/28/2016.
  */
 public class SkullCreator {
 

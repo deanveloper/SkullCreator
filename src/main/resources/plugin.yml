@@ -1,6 +1,6 @@
-main: dev.dbassett.skullcreator.SkullCreatorTesterPlugin
-author: Dean B
-version: ${project.version}
+main: day.dean.skullcreator.SkullCreatorTesterPlugin
+author: deanveloper
+version: 0
 name: SkullCreatorTest
 api-version: "1.13"
 commands:

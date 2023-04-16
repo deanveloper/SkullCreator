@@ -1,4 +1,4 @@
-package dev.dbassett.skullcreator;
+package day.dean.skullcreator;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -8,7 +8,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
- * @author Dean B on 12/28/2016.
+ * @author deanveloper on 12/28/2016.
  */
 public class SkullCreatorTesterPlugin extends JavaPlugin {
 
