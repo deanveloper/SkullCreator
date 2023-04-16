@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"dev.dbassett.skullcreator","l":"SkullCreator"}]
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"day.dean.skullcreator","l":"SkullCreator"}];updateSearchResults();
