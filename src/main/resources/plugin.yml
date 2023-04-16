@@ -1,0 +1,8 @@
+main: day.dean.skullcreator.SkullCreatorTesterPlugin
+author: deanveloper
+version: 0
+name: SkullCreatorTest
+api-version: "1.13"
+commands:
+  testskull:
+    description: "lol what"
